@@ -1,8 +1,8 @@
 # AccessibleName
 
-A macOS menu bar app that shows the name VoiceOver reads for the element under the pointer, so sighted helpers can tell VoiceOver users exactly what to look for.
+A macOS menu bar app that shows the accessible label of the element under the pointer, so sighted helpers can tell VoiceOver users exactly what to look for.
 
-Press the shortcut (⌃Esc by default) to show a popup with the element's name, value, role and hint. Settings let you change the shortcut, have the result spoken, change the text size, and choose when the popup hides (or have it follow the pointer). Drag or resize the popup to pin it in place.
+Press the shortcut (⌃Esc by default) to show a popup with the element's accessible label, value, role and hint. Settings let you change the shortcut, have the result spoken, change the text size, and choose when the popup hides (or have it follow the pointer). Drag or resize the popup to pin it in place.
 
 ## Build
 
