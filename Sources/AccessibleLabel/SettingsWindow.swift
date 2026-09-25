@@ -48,7 +48,7 @@ final class SettingsWindowController: NSWindowController, NSWindowDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "AccessibleName Settings"
+        window.title = "AccessibleLabel Settings"
         window.isReleasedWhenClosed = false
         super.init(window: window)
         window.delegate = self

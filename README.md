@@ -1,4 +1,4 @@
-# AccessibleName
+# AccessibleLabel
 
 A macOS menu bar app that shows the accessible label of the element under the pointer, so sighted helpers can tell VoiceOver users exactly what to look for.
 
@@ -10,7 +10,7 @@ Requires macOS 13 or later and the Swift toolchain (Xcode or Command Line Tools)
 
 ```sh
 ./build.sh
-open build/AccessibleName.app
+open build/AccessibleLabel.app
 ```
 
 The app needs Accessibility permission (System Settings → Privacy & Security → Accessibility). `build.sh` signs with your first Apple Development or Developer ID identity if you have one, so the permission survives rebuilds. Set `SIGN_IDENTITY` to choose one, otherwise it falls back to ad-hoc signing.

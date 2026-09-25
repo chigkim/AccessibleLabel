@@ -47,7 +47,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         guard AXIsProcessTrusted() else {
             hud.show(
                 title: "Accessibility access needed",
-                detail: "Turn on AccessibleName in System Settings → Privacy & Security → Accessibility, then press the shortcut again.",
+                detail: "Turn on AccessibleLabel in System Settings → Privacy & Security → Accessibility, then press the shortcut again.",
                 at: mouse
             )
             speak("Accessibility access needed")
@@ -127,7 +127,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     private func setUpStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        let image = NSImage(systemSymbolName: "text.viewfinder", accessibilityDescription: "AccessibleName")
+        let image = NSImage(systemSymbolName: "text.viewfinder", accessibilityDescription: "AccessibleLabel")
         image?.isTemplate = true
         statusItem.button?.image = image
 
@@ -145,7 +145,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(.separator())
         menu.addItem(withTitle: "Settings…", action: #selector(openSettings), keyEquivalent: ",").target = self
         menu.addItem(.separator())
-        menu.addItem(withTitle: "Quit AccessibleName", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        menu.addItem(withTitle: "Quit AccessibleLabel", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
 
         statusItem.menu = menu
         updateShortcutItem()

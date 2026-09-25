@@ -1,24 +1,24 @@
 #!/bin/zsh
-# Builds AccessibleName.app into ./build
+# Builds AccessibleLabel.app into ./build
 set -euo pipefail
 cd "${0:A:h}"
 
 swift build -c release
-BIN="$(swift build -c release --show-bin-path)/AccessibleName"
+BIN="$(swift build -c release --show-bin-path)/AccessibleLabel"
 
-APP=build/AccessibleName.app
+APP=build/AccessibleLabel.app
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-cp "$BIN" "$APP/Contents/MacOS/AccessibleName"
+cp "$BIN" "$APP/Contents/MacOS/AccessibleLabel"
 
 cat > "$APP/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleIdentifier</key><string>local.AccessibleName</string>
-    <key>CFBundleName</key><string>AccessibleName</string>
-    <key>CFBundleExecutable</key><string>AccessibleName</string>
+    <key>CFBundleIdentifier</key><string>local.AccessibleLabel</string>
+    <key>CFBundleName</key><string>AccessibleLabel</string>
+    <key>CFBundleExecutable</key><string>AccessibleLabel</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleShortVersionString</key><string>1.0</string>
     <key>CFBundleVersion</key><string>1</string>

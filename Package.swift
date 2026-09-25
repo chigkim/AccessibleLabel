@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "AccessibleName",
+    name: "AccessibleLabel",
     platforms: [.macOS(.v13)],
     targets: [
         .executableTarget(
-            name: "AccessibleName",
-            path: "Sources/AccessibleName",
+            name: "AccessibleLabel",
+            path: "Sources/AccessibleLabel",
             linkerSettings: [
                 .linkedFramework("Carbon"),
                 .linkedFramework("ServiceManagement"),
