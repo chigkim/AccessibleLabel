@@ -1,0 +1,9 @@
+# Build output (the signed app embeds the local signing identity)
+/build/
+/.build/
+.swiftpm/
+*.xcodeproj/
+xcuserdata/
+
+# macOS
+.DS_Store
